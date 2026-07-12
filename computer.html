@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Computer Engineering Department</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .card {
+            height: 100%;
+            background-color: rgb(209, 241, 255);
+        }
+        .card img {
+            height: 200px;
+            object-fit: auto;
+        }
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid bg-primary text-white p-3">
+        <div class="row align-items-center">
+            <div class="col-md-4 d-flex align-items-center">
+                <img src="https://r3genhealth.com/wp-content/uploads/2024/03/Empowered-Wellness.png"
+                 alt="Logo" width="50" height="50"
+                    class="rounded-circle me-2">
+                <h2 class="mb-0">Computer Engineering Department</h2>
+            </div>
+            <div class="col-md-8">
+                <input type="text" class="form-control" id="search" placeholder="Search">
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5 mb-5">
+    <div class="card shadow p-4">
+        <div class="row align-items-center">
+            <div class="col-md-4 text-center">
+                <img src="department.jpg" alt="Computer Engineering Department"
+                class="rounded-circle img-fluid border border-3 border-primary" width="220" height="220">
+            </div>
+
+            <div class="col-md-8">
+                <h2 class="text-primary">About the Department</h2>
+                <hr>
+                <p><strong>Department:</strong> Computer Engineering</p>
+                <p><strong>College:</strong> Shah & Anchor Kutchhi Engineering College</p>
+                <p><strong>Established:</strong> 1985</p>
+                <p><strong>Program:</strong> Bachelor of Engineering (B.E.)</p>
+                <p><strong>Affiliation:</strong> University of Mumbai</p>
+                <p class="mt-3">
+                    The Computer Engineering Department is committed to providing
+                    quality education in computing, software development, artificial
+                    intelligence, cybersecurity, and emerging technologies. The
+                    department offers modern laboratories, experienced faculty,
+                    industry-oriented projects, and excellent placement opportunities
+                    to prepare students for successful careers.
+                </p>
+                <a href="#" class="btn btn-primary">Explore Department</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    <div class="container mt-4">
+    <h2 class="text-center mb-4">Service Tabs</h2>
+    <p id="result" class="text-center text-danger fw-bold"></p>
+
+    <div class="row" id="serviceCards">
+        <div class="col-lg-3 col-md-6 col-12 mb-4 service-card">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Faculty Members</h5>
+                    <p>Meet our dedicated faculty members.</p>
+                    <a href="faculty.html" class="btn btn-primary">View</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-12 mb-4 service-card">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Laboratories</h5>
+                    <p>Explore our state-of-the-art laboratories.</p>
+                    <a href="lab.html" class="btn btn-success">View</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-12 mb-4 service-card">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Syllabus</h5>
+                    <p>My academic syllabus and course details.</p>
+                    <a href="syllabus.html" class="btn btn-warning">View</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-12 mb-4 service-card">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Achievements</h5>
+                    <p>My academic and professional achievements.</p>
+                    <a href="achievementcom.html" class="btn btn-danger">View</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-12 mb-4 service-card">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Placement Statistics</h5>
+                    <p>Placement data and statistics.</p>
+                    <a href="placement.html" class="btn btn-info">View</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container mt-5 mb-5">
+    <div class="card p-4">
+        <h3 class="text-primary text-center">Contact Us</h3>
+        <hr>
+        <p><strong>Department:</strong> Computer Engineering Department</p>
+        <p><strong>College:</strong> Shah & Anchor Kutchhi Engineering College</p>
+        <p><strong>Address:</strong> Chembur, Mumbai</p>
+        <p><strong>Email:</strong> computer@sakec.ac.in</p>
+        <p><strong>Phone:</strong> +91 9833314724</p>
+        <p><strong>Office Hours:</strong> Monday – Friday, 9:00 AM – 5:00 PM</p>
+    </div>
+</div>
+    <footer class="container-fluid bg-dark text-white text-center p-3 mt-5">
+    <p class="mb-1">© 2026 Computer Engineering Department. All Rights Reserved.</p>
+    <p class="mb-1">Designed & Developed by Ruhi Sheth</p>
+    <p>Email: computer@sakec.ac.in | Phone: +91 9833314724</p>
+</footer>
+<script>
+    document.getElementById("search").addEventListener("keyup", function () {
+    let value = this.value.toLowerCase();
+    let products = document.getElementsByClassName("service-card");
+    let found = false;
+
+    for (let i = 0; i < products.length; i++) {
+        let text = products[i].innerText.toLowerCase();
+        if (text.includes(value)) {
+            products[i].style.display = "block";
+            found = true;
+        } else {
+            products[i].style.display = "none";
+        }
+    }
+    if (!found) {
+        document.getElementById("result").innerHTML = "No service found.";
+    } else {
+        document.getElementById("result").innerHTML = "";
+    }
+});
+</script>
+</body>
+</html>
